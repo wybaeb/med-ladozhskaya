@@ -3,130 +3,355 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Пасека Ладожская — мёд разнотравный, Волховский район</title>
-<meta name="description" content="Натуральный разнотравный мёд из Волховского района Ленинградской области. Урожай 2026, без нагрева. Заказ через Telegram.">
+<title>Пасека Ладожская — мёд разнотравный из Волховского района</title>
+<meta name="description" content="Разнотравный мёд с семейной пасеки в Волховском районе Ленинградской области. Урожай 2026, качаем без нагрева, 500 г в стекле. Заказ в один клик.">
+<meta property="og:title" content="Пасека Ладожская — мёд разнотравный">
+<meta property="og:description" content="Урожай 2026, без нагрева, 500 г. Волховский район Ленинградской области.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#F7EDD8; --paper2:#EFE0C3; --ink:#2B2118; --gold:#C8891A; --muted:#5A4A33;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);
-       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
-  .comb{position:fixed;inset:0;z-index:0;opacity:.5;pointer-events:none;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='62.4'><path d='M18 0 L54 0 L72 31.2 L54 62.4 L18 62.4 L0 31.2 Z' fill='none' stroke='%23C8891A' stroke-width='1.6' opacity='0.16'/></svg>")}
-  .wrap{position:relative;z-index:1;max-width:1060px;margin:0 auto;padding:0 20px}
-  header{padding:26px 0 8px;text-align:center}
-  .brand{font-size:15px;font-weight:600;letter-spacing:.32em}
-  .rule{height:2px;background:var(--gold);max-width:320px;margin:14px auto;opacity:.85}
-  .sun{width:52px;height:52px;display:block;margin:0 auto}
-  .hero{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding:22px 0 46px}
-  .hero img{width:100%;border-radius:18px;border:2px solid rgba(43,33,24,.14);background:#fff}
-  h1{font-size:clamp(38px,6vw,66px);line-height:.98;margin:0 0 10px;letter-spacing:-.02em}
-  h1 span{display:block;font-size:.34em;letter-spacing:.28em;color:var(--gold);font-weight:600;margin-top:14px}
-  .lead{font-size:18px;color:var(--muted);margin:0 0 22px;max-width:44ch}
-  .price{display:flex;align-items:baseline;gap:12px;margin-bottom:22px}
-  .price b{font-size:42px}
-  .price span{color:var(--muted)}
-  .btn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;
-       padding:15px 26px;border-radius:12px;font-weight:600;font-size:17px;border:0;cursor:pointer}
-  .btn:hover{background:#3d2f22}
-  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:0 0 46px}
-  .fact{background:rgba(255,255,255,.5);border:1px solid rgba(200,137,26,.35);border-radius:14px;padding:18px}
-  .fact b{display:block;font-size:24px;margin-bottom:4px}
-  .fact span{color:var(--muted);font-size:14px}
-  section h2{font-size:30px;margin:0 0 10px}
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding:12px 0 46px}
-  .two img{width:100%;border-radius:14px;border:1px solid rgba(43,33,24,.14)}
-  ul.clean{margin:0;padding-left:20px;color:var(--muted)}
-  ul.clean li{margin-bottom:8px}
-  form{background:rgba(255,255,255,.6);border:2px solid rgba(200,137,26,.45);border-radius:18px;padding:26px;max-width:560px}
-  label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
-  input,select{width:100%;padding:13px 14px;border:1px solid rgba(43,33,24,.25);border-radius:10px;
-    font:inherit;background:#fff;color:var(--ink)}
-  .note{font-size:13px;color:var(--muted);margin-top:12px}
-  footer{border-top:2px solid rgba(200,137,26,.4);margin-top:30px;padding:22px 0 46px;color:var(--muted);font-size:14px}
-  .made{background:rgba(43,33,24,.06);border-left:3px solid var(--gold);padding:14px 16px;border-radius:0 10px 10px 0;margin:18px 0 0}
-  @media(max-width:860px){.hero,.two{grid-template-columns:1fr}.facts{grid-template-columns:repeat(2,1fr)}}
+:root{
+  --ink:#17120E; --ink-soft:#2A2119; --cream:#F7F1E5; --paper:#FCF8F0;
+  --amber:#C8891A; --amber-l:#E3AA46; --sage:#6F7A5C; --muted:#7A6A57;
+  --line:rgba(23,18,14,.14);
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:Manrope,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+     font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.32;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/><feColorMatrix type='saturate' values='0'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='0.5'/></svg>")}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+.kick{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+
+/* ── шапка ─────────────────────────────────────────────── */
+.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+     background:rgba(252,248,240,.82);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.mark{display:flex;align-items:center;gap:12px}
+.mark svg{width:26px;height:26px;flex:none}
+.mark b{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;font-weight:500}
+nav{display:flex;gap:30px;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none;transition:color .2s}
+nav a:hover{color:var(--ink)}
+.nav-cta{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+         border:1px solid var(--ink);border-radius:999px;padding:9px 18px;text-decoration:none;transition:.2s}
+.nav-cta:hover{background:var(--ink);color:var(--cream)}
+
+/* ── герой ─────────────────────────────────────────────── */
+.hero{position:relative;overflow:hidden;padding:clamp(40px,7vw,86px) 0 clamp(30px,5vw,60px)}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(24px,4vw,70px);align-items:center}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(56px,10.4vw,138px);line-height:.86;
+   letter-spacing:-.035em;margin:22px 0 0;text-wrap:balance}
+h1 em{display:block;font-style:italic;font-weight:500;font-size:.315em;letter-spacing:-.01em;
+      color:var(--amber);margin-top:.34em;line-height:1.05}
+.lead{font-size:clamp(16px,1.35vw,19px);color:var(--muted);max-width:38ch;margin:26px 0 0;font-weight:300}
+.buy{display:flex;align-items:center;gap:22px;margin-top:36px;flex-wrap:wrap}
+.price{font-family:var(--serif);font-size:56px;line-height:1;font-weight:700}
+.price small{font-family:var(--sans);font-size:14px;font-weight:400;color:var(--muted);display:block;margin-top:8px;letter-spacing:.02em}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--cream);
+     text-decoration:none;border:0;cursor:pointer;padding:19px 32px;border-radius:999px;
+     font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.01em;
+     transition:transform .18s ease, background .18s ease}
+.btn:hover{background:#000;transform:translateY(-2px)}
+.btn svg{width:16px;height:16px}
+.linkmore{font-size:14.5px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);
+          padding-bottom:2px;transition:color .2s,border-color .2s}
+.linkmore:hover{color:var(--ink);border-color:var(--ink)}
+.shot{position:relative;display:grid;place-items:center;min-height:clamp(360px,44vw,560px)}
+.glow{position:absolute;width:118%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 50% 45%, rgba(227,170,70,.55), rgba(227,170,70,.16) 45%, rgba(227,170,70,0) 70%)}
+.jar{position:relative;z-index:2;width:min(84%,430px);filter:drop-shadow(0 42px 44px rgba(23,18,14,.30))}
+.ground{position:absolute;bottom:6%;width:56%;height:34px;border-radius:50%;z-index:1;
+  background:radial-gradient(ellipse at center, rgba(23,18,14,.34), rgba(23,18,14,0) 70%)}
+.badgewrap{position:absolute;left:-4%;bottom:11%;z-index:5;width:158px;height:158px;
+  border-radius:50%;background:var(--cream);box-shadow:0 18px 40px rgba(23,18,14,.22);
+  display:grid;place-items:center}
+.badgewrap::after{content:"";position:absolute;inset:9px;border-radius:50%;border:1px solid rgba(23,18,14,.16)}
+.badge{width:146px;height:146px;animation:spin 26s linear infinite}
+.badge text{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.13em;fill:var(--ink);text-transform:uppercase}
+.badge .core{fill:var(--amber)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.badge{animation:none}}
+
+/* ── бегущая строка ────────────────────────────────────── */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;
+        background:rgba(200,137,26,.06)}
+.ticker div{display:flex;gap:0;white-space:nowrap;animation:run 34s linear infinite}
+.ticker span{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,30px);
+             padding:16px 26px;color:var(--ink-soft)}
+.ticker i{align-self:center;width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* ── о мёде ────────────────────────────────────────────── */
+.story{padding:clamp(56px,8vw,110px) 0}
+.story .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,80px)}
+.story h2{font-family:var(--serif);font-weight:700;font-size:clamp(32px,3.6vw,52px);line-height:1.04;
+          letter-spacing:-.025em;margin:16px 0 0;text-wrap:balance}
+.items{display:grid;gap:0}
+.item{display:grid;grid-template-columns:56px 1fr;gap:22px;padding:26px 0;border-top:1px solid var(--line)}
+.item:last-child{border-bottom:1px solid var(--line)}
+.item .no{font-family:var(--mono);font-size:12px;color:var(--amber);padding-top:5px;letter-spacing:.08em}
+.item h3{font-size:19px;font-weight:600;margin:0 0 6px;letter-spacing:-.01em}
+.item p{margin:0;color:var(--muted);font-weight:300;max-width:52ch}
+
+/* ── полоса с цитатой ──────────────────────────────────── */
+.quote{position:relative;height:clamp(340px,42vw,520px);overflow:hidden}
+.quote img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.quote-in{position:absolute;inset:0;display:flex;align-items:center;
+  background:linear-gradient(90deg,rgba(10,7,5,.94) 0%,rgba(10,7,5,.78) 38%,rgba(10,7,5,.18) 82%)}
+.quote p{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--cream);
+  font-size:clamp(26px,3.4vw,50px);line-height:1.12;letter-spacing:-.02em;margin:0 0 20px;max-width:20ch}
+.quote .kick{color:rgba(247,241,229,.78)}
+
+/* ── характеристики ────────────────────────────────────── */
+.specs{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.specs .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.spec{padding:34px 26px;border-left:1px solid var(--line)}
+.spec:first-child{border-left:0;padding-left:0}
+.spec b{display:block;font-family:var(--serif);font-size:30px;font-weight:700;letter-spacing:-.02em}
+.spec span{display:block;margin-top:6px;font-size:13.5px;color:var(--muted);font-weight:300}
+
+/* ── тёмный блок с этикеткой ───────────────────────────── */
+.dark{background:var(--ink);color:var(--cream);padding:clamp(56px,8vw,112px) 0;position:relative;overflow:hidden}
+.dark::after{content:"";position:absolute;left:-10%;top:-30%;width:60%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,137,26,.22),rgba(200,137,26,0) 68%)}
+.dark .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,76px);align-items:center;
+            position:relative;z-index:2}
+.dark .kick{color:rgba(247,241,229,.55)}
+.dark h2{font-family:var(--serif);font-size:clamp(32px,3.6vw,52px);font-weight:700;line-height:1.04;
+         letter-spacing:-.025em;margin:16px 0 20px}
+.dark p{color:rgba(247,241,229,.72);font-weight:300;max-width:46ch}
+.label-card{transform:rotate(-2.2deg);border-radius:14px;overflow:hidden;
+            box-shadow:0 40px 70px rgba(0,0,0,.5);border:1px solid rgba(247,241,229,.14)}
+.dark ul{list-style:none;margin:26px 0 0;padding:0}
+.dark li{display:flex;gap:14px;padding:13px 0;border-top:1px solid rgba(247,241,229,.14);
+         font-size:15px;color:rgba(247,241,229,.86);font-weight:300}
+.dark li b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--amber-l);
+           padding-top:3px;flex:none;font-weight:500}
+
+/* ── заказ ─────────────────────────────────────────────── */
+.order{padding:clamp(56px,8vw,110px) 0}
+.order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,76px);align-items:start}
+.steps{margin:26px 0 0}
+.step{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.step b{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.08em;padding-top:3px}
+.step span{color:var(--muted);font-weight:300}
+.step span i{display:block;font-style:normal;color:var(--ink);font-weight:600;margin-bottom:3px}
+form{background:var(--cream);border:1px solid var(--line);border-radius:22px;padding:clamp(24px,3vw,38px)}
+.field{margin-bottom:18px}
+label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--muted);margin-bottom:9px}
+input,select{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:12px;
+             font:inherit;font-size:16px;background:var(--paper);color:var(--ink);transition:border-color .2s}
+input:focus,select:focus{outline:0;border-color:var(--amber)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .btn{width:100%;justify-content:center;margin-top:6px}
+.note{font-size:13px;color:var(--muted);margin:14px 0 0;font-weight:300;text-align:center}
+
+footer{border-top:1px solid var(--line);padding:44px 0;color:var(--muted);font-size:13.5px;font-weight:300}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+
+@media(max-width:980px){
+  .hero .wrap,.story .wrap,.dark .wrap,.order .wrap{grid-template-columns:1fr}
+  .specs .wrap{grid-template-columns:1fr 1fr}
+  .spec{border-left:0;border-top:1px solid var(--line);padding-left:0}
+  .spec:first-child,.spec:nth-child(2){border-top:0}
+  nav{display:none}
+  .badge{width:104px;height:104px;right:0}
+}
 </style>
 </head>
 <body>
-<div class="comb"></div>
-<div class="wrap">
+<div class="grain"></div>
 
-  <header>
-    <svg class="sun" viewBox="-60 -60 120 120" fill="none" stroke="#2B2118" stroke-width="4">
-      <circle r="30"/>
-      <path d="M0 -44 L0 -34 M0 34 L0 44 M-44 0 L-34 0 M34 0 L44 0
-               M-31 -31 L-24 -24 M31 -31 L24 -24 M-31 31 L-24 24 M31 31 L24 24"/>
-      <path d="M-14 0 L0 -14 L14 0 L0 14 Z" fill="#C8891A" stroke="none"/>
-    </svg>
-    <div class="brand">ПАСЕКА&nbsp;ЛАДОЖСКАЯ</div>
-    <div class="rule"></div>
-  </header>
-
-  <div class="hero">
-    <div>
-      <h1>МЁД<span>РАЗНОТРАВНЫЙ</span></h1>
-      <p class="lead">Волховский район Ленинградской области. Качаем с июня по август,
-        не нагреваем и не смешиваем урожаи разных лет — в банке ровно то, что собрали пчёлы.</p>
-      <div class="price"><b>690 ₽</b><span>за банку 500 г</span></div>
-      <a class="btn" href="#zakaz">Заказать</a>
+<header class="top">
+  <div class="wrap">
+    <div class="mark">
+      <svg viewBox="-60 -60 120 120" fill="none" stroke="#17120E" stroke-width="5" aria-hidden="true">
+        <circle r="30"/>
+        <path d="M0 -46 L0 -35 M0 35 L0 46 M-46 0 L-35 0 M35 0 L46 0
+                 M-32 -32 L-25 -25 M32 -32 L25 -25 M-32 32 L-25 25 M32 32 L25 25"/>
+        <path d="M-14 0 L0 -14 L14 0 L0 14 Z" fill="#C8891A" stroke="none"/>
+      </svg>
+      <b>ПАСЕКА&nbsp;ЛАДОЖСКАЯ</b>
     </div>
-    <img src="jar.jpg" alt="Банка мёда «Пасека Ладожская», 500 г">
+    <nav>
+      <a href="#story">О мёде</a>
+      <a href="#label">Этикетка</a>
+      <a href="#order">Доставка</a>
+    </nav>
+    <a class="nav-cta" href="#order">Заказать</a>
   </div>
+</header>
 
-  <div class="facts">
-    <div class="fact"><b>500 г</b><span>нетто, стеклянная банка</span></div>
-    <div class="fact"><b>2026</b><span>урожай этого года</span></div>
-    <div class="fact"><b>Без нагрева</b><span>сохранены ферменты</span></div>
-    <div class="fact"><b>ГОСТ Р 54644</b><span>мёд натуральный</span></div>
-  </div>
-
-  <section class="two">
-    <img src="label.png" alt="Этикетка «Пасека Ладожская»">
+<section class="hero">
+  <div class="wrap">
     <div>
-      <h2>Этикетка, которой можно гордиться</h2>
-      <ul class="clean">
-        <li>Северный геометрический орнамент и солярный знак — не стоковая картинка.</li>
-        <li>Указан производитель, район, год урожая и вес — всё, что спрашивают на ярмарке.</li>
-        <li>Тот же стиль перенесён на эту страницу: один визуальный язык на банке и в интернете.</li>
+      <div class="kick">Волховский район · Ленинградская область</div>
+      <h1>Мёд<em>разнотравный</em></h1>
+      <p class="lead">Качаем с июня по август, не нагреваем и не смешиваем урожаи разных лет.
+        В банке ровно то, что собрали пчёлы на ладожском разнотравье.</p>
+      <div class="buy">
+        <div class="price">690 ₽<small>за банку 500 г</small></div>
+        <a class="btn" href="#order">Заказать банку
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="linkmore" href="#story">Как мы качаем</a>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="glow"></div>
+      <div class="ground"></div>
+      <img class="jar" src="jar.png" alt="Банка мёда «Пасека Ладожская», 500 г">
+      <div class="badgewrap">
+        <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <text><textPath href="#circ" startOffset="0">натуральный · без нагрева · урожай 2026 · </textPath></text>
+          <path class="core" d="M100 86 L114 100 L100 114 L86 100 Z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div>
+    <span>разнотравье</span><i></i><span>без нагрева</span><i></i><span>урожай 2026</span><i></i>
+    <span>500 г в стекле</span><i></i><span>ГОСТ Р 54644</span><i></i>
+    <span>разнотравье</span><i></i><span>без нагрева</span><i></i><span>урожай 2026</span><i></i>
+    <span>500 г в стекле</span><i></i><span>ГОСТ Р 54644</span><i></i>
+  </div>
+</div>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div>
+      <div class="kick">Как это устроено</div>
+      <h2>Мёд одного лета,<br>одного поля,<br>одной пасеки</h2>
+    </div>
+    <div class="items">
+      <div class="item">
+        <div class="no">01</div>
+        <div>
+          <h3>Разнотравье, а не монокультура</h3>
+          <p>Пчёлы работают по лугам вдоль Волхова: иван-чай, клевер, донник, василёк.
+            Отсюда плотный вкус и тёмный янтарь — у каждой качки свой оттенок.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="no">02</div>
+        <div>
+          <h3>Без нагрева и без купажа</h3>
+          <p>Мы не топим мёд для красивой картинки и не смешиваем урожаи разных лет.
+            Он закристаллизуется — это нормально и это признак настоящего мёда.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="no">03</div>
+        <div>
+          <h3>Стекло, 500 грамм, честная этикетка</h3>
+          <p>На банке написано, кто, где и когда качал. Никаких «дары природы»
+            без адреса: район, год урожая и вес — на лицевой стороне.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="quote">
+  <img src="macro.jpg" alt="Мёд стекает с деревянной ложки">
+  <div class="quote-in">
+    <div class="wrap">
+      <p>«Хороший мёд не бывает<br>одинаковым два года подряд»</p>
+      <span class="kick">Николай Ладожский · пасечник в третьем поколении</span>
+    </div>
+  </div>
+</section>
+
+<div class="specs">
+  <div class="wrap">
+    <div class="spec"><b>500 г</b><span>нетто, стеклянная банка</span></div>
+    <div class="spec"><b>2026</b><span>урожай этого года</span></div>
+    <div class="spec"><b>Без нагрева</b><span>ферменты на месте</span></div>
+    <div class="spec"><b>ГОСТ Р&nbsp;54644</b><span>мёд натуральный</span></div>
+  </div>
+</div>
+
+<section class="dark" id="label">
+  <div class="wrap">
+    <div>
+      <div class="kick">Этикетка</div>
+      <h2>Северный орнамент<br>и ни одного лишнего слова</h2>
+      <p>Ромбы и солярный знак — мотивы приладожской вышивки. Всё остальное на этикетке —
+        только то, что покупатель ищет глазами на ярмарке.</p>
+      <ul>
+        <li><b>01</b><span>Производитель, район и год урожая — крупно, а не микрошрифтом на обороте</span></li>
+        <li><b>02</b><span>Вес и стандарт — там, где их привыкли искать</span></li>
+        <li><b>03</b><span>Тот же орнамент и та же палитра работают и на банке, и на этой странице</span></li>
       </ul>
     </div>
-  </section>
-
-  <section id="zakaz">
-    <h2>Заказать мёд</h2>
-    <p class="lead">Заполните два поля — заявка уйдёт прямо в Telegram нашему агенту,
-      он ответит и согласует доставку.</p>
-    <form id="orderForm">
-      <label for="name">Как к вам обращаться</label>
-      <input id="name" name="name" placeholder="Имя" required maxlength="40">
-      <label for="qty">Сколько банок</label>
-      <select id="qty" name="qty">
-        <option value="1">1 банка — 690 ₽</option>
-        <option value="2">2 банки — 1 340 ₽</option>
-        <option value="3">3 банки — 1 950 ₽</option>
-        <option value="6">Ящик, 6 банок — 3 700 ₽</option>
-      </select>
-      <label for="city">Город или посёлок</label>
-      <input id="city" name="city" placeholder="Волхов, Кириши, Санкт-Петербург…" maxlength="40">
-      <p><button class="btn" type="submit">Отправить заявку в Telegram</button></p>
-      <p class="note" id="note">Кнопка откроет чат с нашим агентом и передаст ему вашу заявку.
-        Ничего писать вручную не нужно.</p>
-    </form>
-  </section>
-
-  <div class="made">
-    <b>Как сделана эта страница.</b> Фотография банки, этикетка и сама страница собраны
-    ИИ-агентом по одному сообщению в мессенджере: «сделай этикетку и посадочную страницу
-    под этот мёд». Заявки с формы приходят тому же агенту в Telegram.
+    <img class="label-card" src="label.png" alt="Этикетка «Пасека Ладожская»">
   </div>
+</section>
 
-  <footer>
-    Пасека Ладожская · Ленинградская область, Волховский район ·
-    демонстрационная страница для форума «Энергия возможностей», 8 сентября 2026
-  </footer>
-</div>
+<section class="order" id="order">
+  <div class="wrap">
+    <div>
+      <div class="kick">Заказ</div>
+      <h2 style="font-family:var(--serif);font-weight:700;font-size:clamp(32px,3.6vw,52px);line-height:1.04;letter-spacing:-.025em;margin:16px 0 0">
+        Две строки — и мёд<br>едет к вам</h2>
+      <div class="steps">
+        <div class="step"><b>01</b><span><i>Оставляете заявку</i>Имя, количество банок и город — больше ничего не нужно</span></div>
+        <div class="step"><b>02</b><span><i>Отвечаем в Telegram</i>Подтверждаем наличие и считаем доставку по области или в Петербург</span></div>
+        <div class="step"><b>03</b><span><i>Отправляем в тот же день</i>Самовывоз в Волхове, доставка по договорённости, оплата при получении</span></div>
+      </div>
+    </div>
+
+    <form id="orderForm">
+      <div class="field">
+        <label for="name">Как к вам обращаться</label>
+        <input id="name" name="name" placeholder="Имя" required maxlength="40" autocomplete="name">
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="qty">Количество</label>
+          <select id="qty" name="qty">
+            <option value="1">1 банка — 690 ₽</option>
+            <option value="2">2 банки — 1 340 ₽</option>
+            <option value="3">3 банки — 1 950 ₽</option>
+            <option value="6">Ящик, 6 банок — 3 700 ₽</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="city">Город</label>
+          <input id="city" name="city" placeholder="Волхов" maxlength="40">
+        </div>
+      </div>
+      <button class="btn" type="submit">Отправить заявку в Telegram
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 3 10.5l6 2.5 2.5 6L21 3Z"/><path d="m9 13 12-10"/></svg>
+      </button>
+      <p class="note" id="note">Откроется чат с нами — заявка уже будет в нём.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Пасека Ладожская · Ленинградская область, Волховский район</span>
+    <span>Telegram: <a href="https://t.me/lite_harness_bot">@lite_harness_bot</a> · урожай 2026</span>
+  </div>
+</footer>
 
 <script>
   var BOT = "lite_harness_bot";
@@ -135,10 +360,9 @@
     var name = document.getElementById('name').value.trim() || 'гость';
     var qty  = document.getElementById('qty').value;
     var city = document.getElementById('city').value.trim() || '-';
-    // payload для deep-link бота: только [A-Za-z0-9_-], до 64 символов
-    var raw = 'med|' + qty + '|' + name + '|' + city;
-    var b64 = btoa(unescape(encodeURIComponent(raw)))
-                .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '').slice(0, 60);
+    var raw  = 'med|' + qty + '|' + name + '|' + city;
+    var b64  = btoa(unescape(encodeURIComponent(raw)))
+                 .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '').slice(0, 60);
     document.getElementById('note').textContent =
       'Открываем Telegram… Если чат не открылся — напишите @' + BOT + ' слово «мёд».';
     window.open('https://t.me/' + BOT + '?start=' + b64, '_blank', 'noopener');
